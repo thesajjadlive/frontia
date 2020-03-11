@@ -19,8 +19,7 @@
     @yield('content')
 </main>
 <!-- Essential javascripts for application to work-->
-
-
+@include('layouts.backend._scripts')
 
 <!-- scripts for toastr to trigger-->
 <script>
@@ -37,6 +36,5 @@
     @endif
 </script>
 
-@include('layouts.backend._scripts')
 </body>
 </html>

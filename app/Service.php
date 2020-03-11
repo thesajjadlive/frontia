@@ -5,13 +5,15 @@ namespace App;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 
-class Category extends Model
+class Service extends Model
 {
     use SoftDeletes;
     protected $fillable=[
-        'name',
+        'category_id',
+        'title',
         'slug',
-        'icon',
+        'type',
+        'details',
         'image',
     ];
 
@@ -19,8 +21,8 @@ class Category extends Model
         return 'slug';
     }
 
-    public function service()
+    public function category()
     {
-        return $this->hasMany(Service::class);
+        return $this->belongsTo(Category::class);
     }
 }

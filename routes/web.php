@@ -30,6 +30,11 @@ Route::resource('category', 'CategoryController');
 Route::post('category/{id}/restore', 'CategoryController@restore')->name('category.restore');
 Route::delete('category/{id}/delete', 'CategoryController@delete')->name('category.delete');
 
+//service routes
+Route::resource('service', 'ServiceController');
+Route::post('service/{id}/restore', 'ServiceController@restore')->name('service.restore');
+Route::delete('service/{id}/delete', 'ServiceController@delete')->name('service.delete');
+
 
 Auth::routes();
 

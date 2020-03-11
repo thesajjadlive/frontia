@@ -86,7 +86,7 @@ class CategoryController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function edit(Category $category)
-    {//dd($category);
+    {
         $data['title'] = 'Category';
         $data['category'] = $category;
         return view('back.category.edit',$data);
@@ -103,8 +103,8 @@ class CategoryController extends Controller
     {
         $request->validate([
             'name'=>'required',
-            'icon'=>'required|image',
-            'image'=>'required|image',
+            'icon'=>'image',
+            'image'=>'image',
         ]);
         $data = $request->except('_token');
 
