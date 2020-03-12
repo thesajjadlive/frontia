@@ -19,7 +19,7 @@
             <li><a class="treeview-item {{ Request::is('setting/contact')?'active':'' }}" href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i>Contact</a></li>
             <li><a class="treeview-item {{ Request::is('setting/log-links')?'active':'' }}" href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i>Logo & Links</a></li>
             <li><a class="treeview-item {{ Request::is('setting/meta')?'active':'' }}" href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i>Site Title & Meta tags</a></li>
-            <li><a class="treeview-item {{ Request::is('setting/privacy')?'active':'' }}" href="{{ route('user.index') }}"><i class="icon fa fa-circle-o"></i>Privacy & Policy</a></li>
+            <li><a class="treeview-item {{ Request::is('setting/privacy')?'active':'' }}" href="{{ route('privacy.index') }}"><i class="icon fa fa-circle-o"></i>Privacy & Policy</a></li>
         </ul>
     </li>
 </ul>

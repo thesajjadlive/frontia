@@ -50,6 +50,13 @@ Route::get('profile', 'UserController@show')->name('user.info');
 Route::get('customers', 'UserController@customer')->name('customer');
 
 
+//Privacy & Policy
+route::group(['prefix' => 'setting/privacy'], function () {
+    Route::get('/', 'PrivacyController@index')->name('privacy.index');
+    Route::post('/store', 'PrivacyController@store')->name('privacy.insert');
+});
+
+
 Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
