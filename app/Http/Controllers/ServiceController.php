@@ -50,7 +50,7 @@ class ServiceController extends Controller
         ]);
         $data = $request->except('_token');
 
-        $slug = Str::slug($request->title, '-');
+        $slug = Str::slug($request->title, '-').'-'.rand(000,999);
         $data['slug'] = $slug;
 
 
@@ -111,7 +111,7 @@ class ServiceController extends Controller
         ]);
         $data = $request->except('_token');
 
-        $slug = Str::slug($request->title, '-');
+        $slug = Str::slug($request->title, '-').'-'.rand(000,999);
         $data['slug'] = $slug;
 
 
