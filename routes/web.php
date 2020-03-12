@@ -56,6 +56,12 @@ route::group(['prefix' => 'setting/privacy'], function () {
     Route::post('/store', 'PrivacyController@store')->name('privacy.insert');
 });
 
+//meta routes
+route::group(['prefix' => 'setting/meta'], function () {
+    Route::get('/', 'MetaController@index')->name('meta.index');
+    Route::post('/store', 'MetaController@store')->name('meta.insert');
+});
+
 
 Auth::routes();
 
