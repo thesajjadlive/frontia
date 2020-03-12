@@ -35,6 +35,13 @@ Route::resource('service', 'ServiceController');
 Route::post('service/{id}/restore', 'ServiceController@restore')->name('service.restore');
 Route::delete('service/{id}/delete', 'ServiceController@delete')->name('service.delete');
 
+
+//Request routes
+Route::resource('request', 'DemandController');
+Route::get('pending-request','DemandController@pending')->name('pending');
+Route::get('callback-request','DemandController@callback')->name('callback');
+Route::get('request/{id}/change-status/{status}','DemandController@change_status')->name('changeStatus');
+
 //team routes
 Route::resource('team','TeamController');
 Route::post('team/{id}/restore','TeamController@restore')->name('team.restore');
