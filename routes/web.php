@@ -57,6 +57,13 @@ Route::get('profile', 'UserController@show')->name('user.info');
 Route::get('customers', 'UserController@customer')->name('customer');
 
 
+//contacts routes
+route::group(['prefix' => 'setting/contact'], function () {
+    Route::get('/', 'ContactController@index')->name('contact.index');
+    Route::post('/store', 'ContactController@store')->name('contact.insert');
+});
+
+
 //Privacy & Policy
 route::group(['prefix' => 'setting/privacy'], function () {
     Route::get('/', 'PrivacyController@index')->name('privacy.index');
