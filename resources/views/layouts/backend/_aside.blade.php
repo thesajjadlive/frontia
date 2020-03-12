@@ -1,7 +1,7 @@
-<div class="app-sidebar__user"><img class="app-sidebar__user-avatar" src="https://s3.amazonaws.com/uifaces/faces/twitter/jsa/48.jpg" alt="User Image">
+<div class="app-sidebar__user"><img class="app-sidebar__user-avatar" style="max-width: 48px; max-height: 48px;" src="{{ asset(Auth::user()->image != null? Auth::user()->image : 'uploads/user_default.jpg') }}" alt="User Image">
     <div>
-        <p class="app-sidebar__user-name">John Doe</p>
-        <p class="app-sidebar__user-designation">Frontend Developer</p>
+        <p class="app-sidebar__user-name" ><a style="color: white" class="text-decoration-none" href="{{ route('user.info') }}">{{ ucfirst(auth()->user()->name) ?? 'N/A' }}</a></p>
+        <p class="app-sidebar__user-designation">{{ ucfirst(auth()->user()->type) ?? 'N/A' }}</p>
     </div>
 </div>
 <ul class="app-menu">
