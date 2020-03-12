@@ -52,7 +52,7 @@ class TeamController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $file_name = $slug.rand(000,999).$file->getClientOriginalName();
-            $file->move(public_path('uploads/team/'),$file_name);
+            $file->move('uploads/team/',$file_name);
             $data['image'] = 'uploads/team/' . $file_name;
         }
 
@@ -98,6 +98,7 @@ class TeamController extends Controller
         $request->validate([
             'name'=>'required',
             'designation'=>'required',
+            'image'=>'image'
         ]);
         $data = $request->except('_token');
 
@@ -107,7 +108,7 @@ class TeamController extends Controller
         if ($request->hasFile('image')) {
             $file = $request->file('image');
             $file_name = $slug.rand(000,999).$file->getClientOriginalName();
-            $file->move(public_path('uploads/team/'),$file_name);
+            $file->move('uploads/team/',$file_name);
             unlink($team->image);
             $data['image'] = 'uploads/team/' . $file_name;
         }

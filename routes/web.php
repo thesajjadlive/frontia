@@ -40,6 +40,14 @@ Route::resource('team','TeamController');
 Route::post('team/{id}/restore','TeamController@restore')->name('team.restore');
 Route::delete('team/{id}/delete','TeamController@delete')->name('team.delete');
 
+//Admin Routes
+Route::resource('user', 'UserController');
+Route::post('user/{id}/restore', 'UserController@restore')->name('user.restore');
+Route::delete('user/{id}/delete', 'UserController@delete')->name('user.delete');
+Route::get('profile', 'UserController@show')->name('user.info');
+
+//Customer Route
+Route::get('customers', 'UserController@customer')->name('customer');
 
 
 Auth::routes();

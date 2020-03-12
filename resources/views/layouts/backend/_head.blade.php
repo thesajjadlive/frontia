@@ -11,7 +11,7 @@
 <meta property="og:image" content="http://pratikborsadiya.in/blog/vali-admin/hero-social.png">
 <meta property="og:description" content="Vali is a responsive and free admin theme built with Bootstrap 4, SASS and PUG.js. It's fully customizable and modular.">
 
-<title>{{ config('app.name') }} | Dashboard</title>
+<title>{{ config('app.name') }} {{ $title ?? '' }}</title>
 <link rel="shortcut icon" type="image/png" href="{{ asset('uploads/fav.png') }}"/>
 
 <meta charset="utf-8">
