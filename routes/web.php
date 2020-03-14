@@ -63,6 +63,13 @@ route::group(['prefix' => 'setting/contact'], function () {
     Route::post('/store', 'ContactController@store')->name('contact.insert');
 });
 
+
+//About routes
+route::group(['prefix' => 'setting/about'], function () {
+    Route::get('/', 'AboutController@index')->name('about.index');
+    Route::post('/store', 'AboutController@store')->name('about.insert');
+});
+
 //log and links routes
 route::group(['prefix' => 'setting/link'], function () {
     Route::get('/', 'LinkController@index')->name('link.index');

@@ -57,7 +57,7 @@
                             <label for="about" class="col-md-4 col-form-label text-md-right">{{ __('Meta Description') }}</label>
 
                             <div class="col-md-6">
-                                <textarea id="description" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required>@if(isset($meta->description)){{ $meta->description}}@endif</textarea>
+                                <textarea id="description" rows="5" type="text" class="form-control @error('description') is-invalid @enderror" name="description" required>@if(isset($meta->description)){{ $meta->description}}@endif</textarea>
 
                                 @error('description')
                                     <span class="invalid-feedback" role="alert">

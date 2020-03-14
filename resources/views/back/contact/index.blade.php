@@ -72,7 +72,7 @@
                             <label for="embed-map" class="col-md-4 col-form-label text-md-right">{{ __('Embed Map Link') }}</label>
 
                             <div class="col-md-6">
-                                <textarea name="map" id="" class="form-control" cols="68" rows="5" required>@if(isset($contacts->map)){{ $contacts->map}}@endif</textarea>
+                                <textarea name="map" id="" class="form-control" rows="5" required>@if(isset($contacts->map)){{ $contacts->map}}@endif</textarea>
                             </div>
                         </div>
 
