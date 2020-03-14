@@ -37,12 +37,12 @@ Route::delete('service/{id}/delete', 'ServiceController@delete')->name('service.
 
 
 //Request routes
-Route::resource('request', 'DemandController');
-Route::get('pending-request','DemandController@pending')->name('pending');
-Route::get('callback-request','DemandController@callback')->name('callback');
+Route::get('request','DemandController@index')->name('request.index');
+Route::get('request-pending','DemandController@pending')->name('pending');
+Route::get('request-callback','DemandController@callback')->name('callback');
 Route::get('request/{id}/change-status/{status}','DemandController@change_status')->name('changeStatus');
 
-//team routes
+//Team routes
 Route::resource('team','TeamController');
 Route::post('team/{id}/restore','TeamController@restore')->name('team.restore');
 Route::delete('team/{id}/delete','TeamController@delete')->name('team.delete');
